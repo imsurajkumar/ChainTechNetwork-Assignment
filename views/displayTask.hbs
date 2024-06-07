@@ -1,0 +1,41 @@
+{{>header}}
+{{>navbar}}
+
+<span class="backbutton icon-tooltip"  data-tooltip="Back to Home"><a href="/"><i class="fa-solid fa-left-long"></i></a></span>
+<div class="container w-75">
+    <h4 class="text-center underline-text">Tasks</h4>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped table-info">
+
+            <thead class="text-center">
+                <tr>
+                    <th width="5%">No.</th>
+                    <th width="30%">Title</th>
+                    <th width="50%">Description</th>
+                    <th width="15%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Example Title 1</td>
+                    <td>Example Title 1</td>
+
+                    <td class="d-flex justify-content-around icon-container">
+                        <span class="icon-tooltip" data-tooltip="Edit">
+                            <a href="/update"><i class="fa-solid fa-pen-to-square text-warning fs-4"></i></a>
+                        </span>
+                        <span class="icon-tooltip" data-tooltip="Delete">
+                            <a href="#"><i class="fa-solid fa-trash-can text-danger fs-4"></i></a>
+                        </span>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{{>copyright}}
+{{>footer}}
