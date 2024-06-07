@@ -1,8 +1,16 @@
 {{>header}}
 
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
+{{>backtohome}}
+
+<section id="custom-error" class="text-center">
+    <h1>{{result}}</h1>
+    <h2>{{reason}}</h2>
+</section>
+
+<h1 class="text-center">{{message}}</h1>
+<h2 class="text-center">{{error.status}}</h2>
 <pre>{{error.stack}}</pre>
+
 
 
 {{>footer}}

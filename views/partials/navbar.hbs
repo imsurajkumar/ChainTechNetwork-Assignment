@@ -1,29 +1,37 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="navbar-brand site-logo" href="/">
+            <img src="images/chaintech_network_logo.jpg" alt="">
+            <span> ChainTech</span>
 
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <a class="navbar-brand site-logo" href="#">
-                <img src="images/chaintech_network_logo.jpg" alt="">
-                <span> ChainTech</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ms-auto me-4 ">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/"><i class="fa-solid fa-house-chimney"></i>
+                        Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add"><i class="fa-solid fa-square-plus"></i> Add</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-eye"></i> Task
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="/display"><i class="fa-solid fa-list"></i> Total </a></li>
+                        <li><a class="dropdown-item" href="/pendingtask"><i class="fa-solid fa-clock"></i> Pending </a></li>
+                        <li><a class="dropdown-item" href="/completedtask"><i class="fa-solid fa-square-check"></i> Completed </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav ms-auto me-4 ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house-chimney"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/add"><i class="fa-solid fa-square-plus"></i> Add</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/display"><i class="fa-solid fa-eye"></i> Task</a>
-                    </li>
-                </ul>
-
-            </div>
         </div>
-    </nav>
+    </div>
+</nav>

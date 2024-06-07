@@ -1,20 +1,25 @@
 {{>header}}
+{{>backtohome}}
 
-<span class="backbutton icon-tooltip"  data-tooltip="Back to Home"><a href="/"><i class="fa-solid fa-left-long"></i></a></span>
-
-<div class="container mt-5 add-task-container ">
+<div class="container  add-task-container ">
     <h3 class="text-center underline-text rounded  py-2">Update Task</h3>
     <form action="/add" method="post">
         <div class="mb-3 ">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Enter the task title"
-                autocomplete="off" />
+            <input type="text" class="form-control" id="title" name="title" value="{{task.title}}"
+                placeholder="Enter the task title" autocomplete="off" />
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <textarea class="form-control" id="description" name="description" placeholder="description..."
-                rows="5"></textarea>
-
+                rows="5">{{task.description}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select class="form-select form-control" name="status">
+                 <option value="completed" {{#if (eq this.status "completed")}}selected{{/if}}>Completed</option>
+                <option value="pending" {{#if (eq task.status "pending")}}selected{{/if}}>Pending</option>
+            </select>
         </div>
 
         <div class="mb-3 text-center">
