@@ -91,12 +91,29 @@ router.route('/edit/:_id')
         response.status(500).redirect('/', {error})
     }
 })
-.put(async (request, response)=>{
-    try {
-        const data = await Task.findOne({_id:request.params._id})
-    } catch (error) {
-        console.log(error);
-        response.status(400).render('error', {result:"Task Updation Fail", reason:"Internal Server Error", error})
+.post(async (request, response)=>{
+    if(!response.body.title || !response.body.status){
+        response.send(400).render("error", {result:"Task Updataion Fail", reason:"Task should have a title"})
+    }else{
+        try {
+            const task = await Task.findOne({_id:request.params._id});
+            if (task) {
+                await Task.updateOne({_id:request.params._id}, {
+                    $set : {
+                        // title : title?request.body.title:Task.title,
+                        title : request.body.title??task.title,
+                        description: request.body.description??task.description,
+                        status:request.body.status??task.status
+                    }
+                })
+                response.redirect("/")
+            } else {
+                response.send(400).render('error',{result:"Task Updation Fail", reason:"Something went wrong"})
+            }   
+        } catch (error) {
+            console.log(error);
+            response.status(500).render('error', {result:"Task Updation Fail", reason:"Internal Server Error", error})
+        }
     }
 });
 

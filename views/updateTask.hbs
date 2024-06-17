@@ -3,7 +3,7 @@
 
 <div class="container  add-task-container ">
     <h3 class="text-center underline-text rounded  py-2">Update Task</h3>
-    <form action="/add" method="post">
+    <form action="/edit/{{task._id}}" method="post">
         <div class="mb-3 ">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="title" name="title" value="{{task.title}}"
